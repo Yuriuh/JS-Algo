@@ -2,25 +2,25 @@
   // 用数组实现 Stack 类
   class Stack {
     constructor() {
-      this._items = []
+      this.items = []
     }
     push(element) {
-      this._items.push(element)
+      this.items.push(element)
     }
     pop() {
-      return this._items.pop()
+      return this.items.pop()
     }
     peek() {
-      return this._items[this._items.length - 1]
+      return this.items[this.items.length - 1]
     }
     size() {
-      return this._items.length
+      return this.items.length
     }
     isEmpty() {
-      return this._items.length === 0
+      return this.items.length === 0
     }
     clear() {
-      this._items = []
+      this.items = []
     }
   }
 }
@@ -28,45 +28,45 @@
 // 用对象实现 Stack 类
 class Stack {
   constructor() {
-    this._count = 0
-    this._items = {}
+    this.count = 0
+    this.items = {}
   }
   push(element) {
-    this._items[this._count] = element
-    this._count += 1
+    this.items[this.count] = element
+    this.count += 1
   }
   pop() {
     if (this.isEmpty()) {
       return undefined
     }
-    this._count -= 1
-    const result = this._items[this._count]
-    delete this._items[this._count]
+    this.count -= 1
+    const result = this.items[this.count]
+    delete this.items[this.count]
     return result
   }
   peek() {
     if (this.isEmpty()) {
       return undefined
     }
-    return this._items[this._count - 1]
+    return this.items[this.count - 1]
   }
   size() {
-    return this._count
+    return this.count
   }
   isEmpty() {
-    return this._count === 0
+    return this.count === 0
   }
   clear() {
-    this._items = {}
-    this._count = 0
+    this.items = {}
+    this.count = 0
   }
   toString() {
     if (this.isEmpty()) {
       return ''
     }
-    let objString = `${this._items[0]}`
-    for (let i = 1; i < this._count; i++) {
-      objString = `${objString}, ${this._items[i]}`
+    let objString = `${this.items[0]}`
+    for (let i = 1; i < this.count; i++) {
+      objString = `${objString}, ${this.items[i]}`
     }
     return objString
   }
