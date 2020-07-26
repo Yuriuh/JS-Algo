@@ -47,13 +47,13 @@ class Set {
   }
 }
 
-const set = new Set()
-set.add(1)
-set.add(2)
-set.add(3)
-console.log('set', set)
-console.log('values', set.values())
-console.log('has', set.has(1))
-console.log('size', set.size())
-set.delete(1)
-console.log('values', set.values())
+// const set = new Set()
+// set.add(1)
+// set.add(2)
+// set.add(3)
+// console.log('set', set)
+// console.log('values', set.values())
+// console.log('has', set.has(1))
+// console.log('size', set.size())
+// set.delete(1)
+// console.log('values', set.values())
