@@ -25,27 +25,6 @@ class LinkedList {
     this.count += 1
   }
   removeAt(index) {
-    // 检查越界值
-    if (index >= 0 && index < this.count) {
-      let current = this.head
-      // 移除第一项
-      if (index === 0) {
-        this.head = current.next
-      } else {
-        let previous
-        for (let i = 0; i < index; i++) {
-          previous = current
-          current = current.next
-        }
-        // 将 previous 与 current 的下一项链接起来：跳过 current，从而移除它
-        previous.next = current.next
-      }
-      this.count -= 1
-      return current.element
-    }
-    return undefined
-  }
-  removeAt2(index) {
     if (index >= 0 && index < this.count) {
       let current = this.head
       if (index === 0) {
@@ -130,3 +109,4 @@ list.push(111)
 list.push(222)
 list.push(333)
 list.insert(555, 1)
+console.log('to string', list.toString())
